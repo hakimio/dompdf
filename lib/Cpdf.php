@@ -3665,9 +3665,8 @@ EOT;
      */
     function rotate($angle, $x, $y)
     {
-        $y = $this->currentPageSize["height"] - $y;
-
-        $a = deg2rad($angle);
+        //For some reason the angles were inverted :/
+        $a = deg2rad(-$angle);
         $cos_a = cos($a);
         $sin_a = sin($a);
 
